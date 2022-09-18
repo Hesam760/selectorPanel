@@ -39,7 +39,6 @@ function Selector() {
 
       SelectorPack(annotorious, {});
       annotorious.setDrawingTool('rect');
-      console.log(annotorious.listDrawingTools());
       setAnno(annotorious);
 
       return () => {  
