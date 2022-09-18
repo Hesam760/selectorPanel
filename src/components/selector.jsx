@@ -23,18 +23,6 @@ function Selector() {
         annotorious = new Annotorious({
           image: imgEl.current
         });
-  
-        annotorious.on('createAnnotation', annotation => {
-          console.log('created', annotation);
-        });
-  
-        annotorious.on('updateAnnotation', (annotation, previous) => {
-          console.log('updated', annotation, previous);
-        });
-  
-        annotorious.on('deleteAnnotation', annotation => {
-          console.log('deleted', annotation);
-        });
       }
 
       SelectorPack(annotorious, {});
