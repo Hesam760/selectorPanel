@@ -8,7 +8,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BiShapePolygon , BiRectangle , BiCircle, BiBorderRadius} from "react-icons/bi";
 import {FaHandPaper} from "react-icons/fa";
 import { useTranslation } from 'react-i18next';
-import {CSVLink} from 'react-csv'
 import "./anno.css";
 function Selector() {
 
@@ -127,7 +126,7 @@ function Selector() {
     const getJSON = () => {
       const getanno = anno.getAnnotations();
       // jsonFile.add(JSON.stringify(getanno));
-       console.log(JSON.stringify(getanno)); 
+      //  console.log(JSON.stringify(getanno)); 
 
       const jsonString = `data:text/json;chatset=utf-8,${encodeURIComponent(
         JSON.stringify(getanno)
@@ -152,23 +151,6 @@ function Selector() {
       let text = document.getElementById('text');
       text.classList.toggle('active');
     }
-
-
-    const csv = () => {
-      const getanno = anno.getAnnotations();
-      // let  = "data:text/csv;charset=utf-8," + getanno.map(e => e.join(",")).join("\n");
-
-
-
-      const keys = Object.keys(getanno[0]);
-      const csvContent = [keys.join(",") , getanno.map(row => keys.map(key => row[key]).join(",")).join("\n")].join("\n");
-      var encodedUri = encodeURI(csvContent);
-      const link = document.createElement("a");
-      link.href = encodedUri;
-      link.download = "data.csv";
-      link.click();
-
-    }
     
     return(
     <>
@@ -184,18 +166,13 @@ function Selector() {
               </div>
               <img ref={imgEl} src={src} style={{height:'500px' , width:'800px'}}/>
               <button className='btn btn-danger my-3' onClick={getJSON}> {t('get JSON ')} </button>
-              {/* <button className='btn btn-danger my-2' onClick={csv}> {t('get CSV')} </button> */}
-              {/* <CsvDownload data={jsonString} filename="file.csv">
-                Good Data
-              </CsvDownload> */}
               <button className='btn btn-primary my-2' onClick={getSelected}> {t('get Selected')} </button>
           </div>
       </div>   
       <div id='text'>
-              {/* {JSON.stringify(anno.getSelected())} */}
-              <p id='paragraph'></p>
-              <br/>
-              <a href='#' onClick={getSelected} id='close'>{t('close')} </a>
+        <p id='paragraph'></p>
+        <br/>
+        <a href='#' onClick={getSelected} id='close'>{t('close')} </a>
       </div>
     </>
     );
