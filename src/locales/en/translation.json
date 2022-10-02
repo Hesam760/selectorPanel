@@ -1,0 +1,12 @@
+{
+    "dashboard" :"Dashboard" ,
+    "home" : "Home" ,
+    "analytics" : "Analytics" ,
+    "profile" : "Profile" ,
+    "menu" : "Menu" , 
+    "image Selector" : "image Selector",
+    "get JSON" : "get JSON",
+    "get CSV" : "get CSV",
+    "clsoe" : "close",
+    "get Selected" : "get Selected"
+}

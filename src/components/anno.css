@@ -1,0 +1,86 @@
+
+.a9s-annotation.Car .a9s-inner {
+  stroke-width:2px;
+  stroke:blue;
+  /* fill:rgba(0,0,255,0.1);
+  -webkit-filter:drop-shadow(0 0 10px rgba(0,0,255,0.8));
+          /* filter:drop-shadow(0 0 10px rgba(0,0,255,0.8)); */
+} 
+
+.a9s-annotation.Bike .a9s-inner {
+  stroke-width:2px;
+  stroke:red;
+
+} 
+
+
+.a9s-annotation.Human .a9s-inner {
+  stroke-width:2px;
+  stroke:white;
+} 
+
+
+.a9s-annotation.Traffic-Light .a9s-inner {
+  stroke-width:2px;
+  stroke:green;
+}
+
+
+.a9s-annotation.Motor-Cycle .a9s-inner {
+  stroke-width:2px;
+  stroke:yellow;
+}
+
+.a9s-annotation.Object .a9s-inner {
+  stroke-width:2px;
+  stroke:mediumaquamarine;
+}
+
+.container#blur.active{
+filter : blur(20px);
+pointer-events: none;
+user-select: none;
+}
+
+#text{
+  position: fixed;
+  top: 40%;
+  left: 52%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+  padding: 50px;
+ box-shadow: 0 5px 30px black ;
+ background: #fff;
+ visibility: hidden;
+ opacity: 0;
+ transition: 0.5s;
+}
+
+#text.active{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
+#close{
+  position: relative;
+  padding: 5px 20px;
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  color: #fff;
+  background: #111;
+}
+
+/* .a9s-annotation.Car .a9s-inner:hover {
+  stroke-width:6px;
+  stroke:blue;
+  fill:rgba(0,0,255,0.3);
+} */
+
+
+/* 
+svg.a9s-annotationlayer .a9s-annotation .a9s-inner {
+  stroke-width:2;
+  stroke:#ffff00;
+} */

@@ -10,12 +10,13 @@ import Analytics from "./components/analytics";
 import Profile from "./components/profile";
 import Dashboard from "./components/Dashboard";
 import Home from "./components/home";
+import "./i18n";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
            <BrowserRouter>
-           <Sidebar/>
+           <App/>
                 <Routes>
                     <Route path="/selector" element={<Selector/>}/>
                     <Route path="/analytics" element={<Analytics/>}/>

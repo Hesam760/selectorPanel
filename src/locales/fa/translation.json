@@ -1,0 +1,12 @@
+{
+    "dashboard" : "داشبورد" , 
+    "home" : "خانه" ,
+    "analytics" : "آنالیز" ,
+    "profile" : "پروفایل" ,
+    "menu" : "منو" ,
+    "image Selector" : "انتخاب کننده عکس",
+    "get JSON " : "دریافت JSON ",
+    "get CSV" : "دریافت CSV",
+    "close" : "خروج",
+    "get Selected" : "دریافت قسمت انتخاب شده"
+}
