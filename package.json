@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@recogito/annotorious": "^2.7.8",
     "@recogito/annotorious-selector-pack": "^0.5.3",
     "@recogito/annotorious-shape-labels": "^0.2.3",
@@ -11,12 +12,14 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
-    "bootstrap": "^5.2.1",
+    "bootstrap": "^5.2.2",
     "cdbreact": "^1.5.3",
     "country-flag-icons": "^1.5.5",
     "csv-string": "^4.1.0",
     "flag-icons": "^6.6.6",
     "i18next": "^21.9.2",
+    "jquery": "^3.6.1",
+    "popper.js": "^1.16.1",
     "react": "^18.2.0",
     "react-csv": "^2.2.2",
     "react-dom": "^18.2.0",
@@ -26,6 +29,8 @@
     "react-json-to-csv": "^1.0.4",
     "react-router-dom": "^6.4.0",
     "react-scripts": "5.0.1",
+    "react-social-icons": "^5.15.0",
+    "w3-css": "^4.1.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {

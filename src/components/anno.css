@@ -56,6 +56,26 @@ user-select: none;
  transition: 0.5s;
 }
 
+#setting{
+  position: fixed;
+  top: 40%;
+  left: 52%;
+  transform: translate(-50%,-50%);
+  width: 1000px;
+  padding: 50px;
+ box-shadow: 0 5px 30px black ;
+ background: #fff;
+ visibility: hidden;
+ opacity: 0;
+ transition: 0.5s;
+}
+
+#setting.active{
+  visibility: visible;
+  opacity: 1;
+  transition: 0.5s;
+}
+
 #text.active{
   visibility: visible;
   opacity: 1;

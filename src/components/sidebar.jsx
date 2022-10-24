@@ -3,6 +3,7 @@ import { NavLink , Link } from 'react-router-dom';
 import Selector from './selector';
 import { useTranslation } from 'react-i18next';
 import { GB , IR } from 'country-flag-icons/react/3x2'
+import Home from './home';
 import {
   CDBSidebar,
   CDBSidebarContent,
@@ -15,18 +16,38 @@ import {
 const Sidebar = () => {
   const { t, i18n } = useTranslation();
   const changeLanguageHandler = (e) => {
+    var style = document.createElement('style');
       const languageValue = e.target.value;
       i18n.changeLanguage(languageValue);
       if(languageValue === 'fa'){
-        document.getElementsByTagName('html')[0].setAttribute("dir", "rtl");
+        style.innerHTML =`
+        .sidebar {
+          direction : rtl;
+        }
+        .items {
+          direction : rtl;
+          text-align : right;
+        }
+        `;
+        document.head.appendChild(style);
      }
-    else {
-        document.getElementsByTagName('html')[0].setAttribute("dir", "ltr");
-    }
+      else {
+        style.innerHTML =`
+        .sidebar {
+          direction : ltr;
+        }
+        .items {
+          direction : ltr;
+          text-align : left;
+        }
+        `;
+        document.head.appendChild(style);
+      }
   }
 
   return (
-    <div style={{ display: 'grid', height: '100vh',width:'200px', overflow: 'scroll initial',position:'fixed'}} className="col-md-2">
+    <div className='sidebar'>
+    <div style={{ display: 'grid', height: '100vh',width:'200px', overflow: 'scroll initial',position:'fixed'}} className=" col-md-2">
       <CDBSidebar textColor="#fff" backgroundColor="#333">
         <CDBSidebarHeader prefix={<i className="fa fa-bars fa-large"></i>}>
           <p>
@@ -36,19 +57,19 @@ const Sidebar = () => {
         <CDBSidebarContent className="sidebar-content">
           <CDBSidebarMenu>
           <NavLink exact to="/" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="home">{t('home')}</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="home" className='items'>{t('home')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/dashboard" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="columns">{t('dashboard')}</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="columns" className='items'>{t('dashboard')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/selector" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="camera">{t('image Selector')}</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="camera" className='items'>{t('image Selector')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/profile" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="user">{t('profile')}</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="user" className='items'>{t('profile')}</CDBSidebarMenuItem>
             </NavLink>
             <NavLink exact to="/analytics" activeClassName="activeClicked">
-              <CDBSidebarMenuItem icon="chart-line">{t('analytics')}</CDBSidebarMenuItem>
+              <CDBSidebarMenuItem icon="chart-line" className='items'>{t('analytics')}</CDBSidebarMenuItem>
             </NavLink>
           </CDBSidebarMenu>
         </CDBSidebarContent> 
@@ -63,6 +84,7 @@ const Sidebar = () => {
         </center>
         </CDBSidebarFooter>
       </CDBSidebar> 
+    </div>
     </div>
   );
 };
