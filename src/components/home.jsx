@@ -199,10 +199,10 @@ const Home = () => {
         <form action="">
         <div className="mb-3 mt-3">
           <label for="email" className='email-field'> ایمیل : </label>
-          <input type="email" id="email" placeholder="ایمیل خود را وارد کنید :" name="email"/>
+          <input type="email" id="email" placeholder="ایمیل خود را وارد کنید " name="email"/>
         </div>
         <label for="name" >نام : </label>
-            <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید :"/>
+            <input type="text" id="name" name="name" placeholder="نام خود را وارد کنید "/>
             <label for="country"> شهر :</label>
         <select id="country" name="country" className='selected'>
           <option value="australia">تهران</option>
